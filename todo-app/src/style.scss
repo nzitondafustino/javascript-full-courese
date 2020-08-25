@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    z-index: 1;;
+}
+.nav {
+    background-color:#eee;
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0, 0.4);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem 3rem;
+}
+.data {
+    display: grid;
+    grid-template-columns:20vw repeat(3, 10%);
+    justify-content: center;
+    grid-column-gap: 8rem;
+    justify-items: center;
+
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+}
+.input {
+    padding: 1rem 1.5rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #eee;
+    transition: border-bottom .4s;
+    border-radius: 5px;
+    border-bottom: 2px solid transparent;
+    width: 100%;
+    text-align: center;
+}
+.input:focus {
+    border-bottom: 2px solid green;
+    outline: none;
+}
+.date {
+    border: none;
+    background-color: #eee;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid transparent;
+}
+.date:focus {
+    outline: none;
+    border-bottom: 2px solid green;
+}
+.status-d {
+    border: none;
+    background-color: #eee;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid transparent; 
+}
+.status-d:focus{
+    outline: none;
+    border-bottom: 2px solid green;  
+}
+.btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color .4s;
+}
+.btn:focus,
+.btn:hover {
+    outline: none;
+    background-color: blue;
+}
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0, 0.1);
+    font-size: 1.5rem;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+.icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+.icon:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.delete {
+    fill: red;
+}
+.view {
+    fill: dodgerblue;
+}
+.edit {
+    fill:teal;
+}
+.status {
+    display: grid;
+    grid-template-columns:100px repeat(3,1fr);
+    grid-column-gap: 1rem;
+    justify-content: center;
+    justify-self: center;
+}
+.name, .due-date, .status {
+    padding: 2rem 1.5rem;
+}
+.ongoing {
+    text-align: center;
+    background-color: red;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    color: white;
+}
+.done {
+    text-align: center;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    background-color: teal;
+}
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(0,0, 0, 0.6);
+}
+.modal {
+    background-color:white;
+    width: 50%;
+    height: 50vh;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    justify-content: center;
+    align-content: space-evenly;
+
+    position: relative;
+}
+.modal__input {
+    grid-column: 1/span 2;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.modal__btn {
+    grid-column: 1/-1;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal__date,
+.modal__status {
+    width: 65%;
+}
+.modal__date{
+    justify-self: end;
+    margin-right: 5%;
+}
+
+.modal__status {
+    margin-left: 5%;
+}
+.heading-2 {
+    grid-column: 1/-1;
+    justify-self: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: stretch;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: red;
+    border: 1px solid red;
+    transition: all .4s;
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
